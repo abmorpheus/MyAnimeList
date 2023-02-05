@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+* {
+    padding:  0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    color: white;
+    z-index: 12;
+}
+
+.header .search-box input{
+    outline: none;
+    border: none;
+    width: 400px;
+    height: 30px;
+    padding-left: 10px; 
+    font-size: 1rem; 
+}
+
+.container {
+    width: 100%;
+    margin: 100px auto;
+    display: flex;
+}
+
+.animeInfo {
+    width: 300px;
+    height: 100%;
+    background-color: aquamarine;
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+
+}
+
+.anime-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.anime-row  .row {
+    display: inline-flex;
+    gap: 20px;
+    margin-left: 20rem;
+}
+
+.anime-row .text-heading {
+    margin-left: 20rem;
+    margin-top: 1rem;
+}
+
+.card {
+    width: 250px;
+    height: 400px;
+    padding: 0 0 1rem 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 80%;
+}
+
+.anime-content {
+    padding: 40px;
+    margin: 80px 0;
+}
+
+.anime-content img {
+    width: 200px;
+
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* height: 100%; */
+    height: 0;
+    padding: 1rem;
+    background-color: rgba(177, 95, 95, 0.7);
+    border-radius: 10rem 3rem 0 0;
+    text-align: justify;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.anime-info:hover .overlay {
+    opacity: 1;
+    height: 90%;
+}
+
+.overlay .synopsis {
+    font-weight: 600;
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 1rem;
+    overflow: auto;    
+}
+
+.mylist {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    padding: 0.5rem;
+    background-color: bisque;
+    font-size: 1rem;
+    cursor:pointer;
+    font-weight: bold;
+    border-radius: 10px;
+}
